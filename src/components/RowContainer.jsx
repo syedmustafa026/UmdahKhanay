@@ -56,7 +56,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               </motion.div>
               <motion.div
                 whileTap={{ scale: 0.75 }}
-                className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
+                className="w-8 h-8 rounded-full bg-main flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
                 onClick={() => setItems([...cartItems, item])}
               >
                 <MdShoppingBasket className="text-white" />
@@ -68,11 +68,11 @@ const RowContainer = ({ flag, data, scrollValue }) => {
                 {item?.title}
               </p>
               <p className="mt-1 text-sm text-gray-500">
-                {item?.calories} Calories
+                {item?.calories} KG
               </p>
               <div className="flex items-center gap-8">
-                <p className="text-lg text-headingColor font-semibold">
-                  <span className="text-sm text-red-500">$</span> {item?.price}
+                <p className="text-lg text-main font-semibold">
+                  <span className="text-sm text-main">$</span> {item?.price}
                 </p>
               </div>
             </div>

@@ -44,11 +44,9 @@ module.exports = {
         "2xl": "1536px",
       },
       colors: {
-        background: "#17161B",
-        DarkColor: "#17161B",
-        lightColor: "#fff",
         cartNumBg: "#e80013",
         primary: "#f5f3f3",
+        main: "#17161B",
         cardOverlay: "rgba(256,256,256,0.4)",
         lighttextGray: "#9ca0ab",
         card: "rgba(256,256,256,0.8)",

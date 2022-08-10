@@ -2,7 +2,7 @@ import React from "react";
 import Delivery from "../img/delivery.png";
 import HeroBg from "../img/heroBg.png";
 import { heroData } from "../utils/data";
-
+import  "../styles/style.css"
 const HomeContainer = () => {
   return (
     <section
@@ -23,25 +23,23 @@ const HomeContainer = () => {
           </div>
         </div>
 
-        <p className="text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
-          The Exotic Taste in  
-          <span className="text-white-600 text-[3rem] lg:text-[5rem]">
-             Karachi
-          </span>
+        <p className="text-[2 rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
+          Taste Ghar k khanay Jesa Chahiye
         </p>
 
-        <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima velit
-          eaque fugit distinctio est nam voluptatum architecto, porro iusto
-          deserunt recusandae ipsa minus eos sunt, dolores illo repellat facere
-          suscipit!
-        </p>
-
+        <p class=" leading-relaxed">Umdah khana brings Hygenic Quality Home food at your Door step with
+          fresh made meal for you.For your better cooked food we takes pre-order maximum which is 24 hours
+          before you can give order to us.We are conected with different Social Media platforms Mostly
+          present on <u><i><a target="_blank"
+            href="https://www.facebook.com/umdahkhanay">Facebook</a></i></u> and <u><i><a
+              target="_blank" href="https://www.instagram.com/umdahkhanay">Instagram </a></i></u> .
+          You also submit your pre-order on Whatsapp and do check it out. 
+          </p>
         <button
           type="button"
-          className="bg-gradient-to-br from-white-400 to-white-500 w-full md:w-auto px-4 py-2  rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
+          className="button bg-main text-color-primary text-primary w-full md:w-auto px-4 py-2  rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
         >
-          Order Now
+         Get a Quote
         </button>
       </div>
       <div className="py-2 flex-1 flex items-center relative">
