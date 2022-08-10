@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../firebase.config";
 
-import Logo from "../img/logo.png";
+import Logo from "../img/logopng.png";
 import Avatar from "../img/avatar.png";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
@@ -50,14 +50,12 @@ const Header = () => {
       cartShow: !cartShow,
     });
   };
-
   return (
-    <header className="fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-primary">
+    <header className="fixed h-28 z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-background">
       {/* desktop & tablet */}
       <div className="hidden md:flex w-full h-full items-center justify-between">
         <Link to={"/"} className="flex items-center gap-2">
-          <img src={Logo} className="w-8 object-cover" alt="logo" />
-          <p className="text-headingColor text-xl font-bold"> City</p>
+          <img src={Logo} className="w-48 object-cover" alt="logo" />
         </Link>
 
         <div className="flex items-center gap-8">
@@ -65,10 +63,10 @@ const Header = () => {
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
-            className="flex items-center gap-24 "
+            className="flex items-center gap-x-8  "
           >
             <li className="text-lg
-             text-textColor
+             text-lightColor
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
@@ -76,7 +74,15 @@ const Header = () => {
               Home
             </li>
             <li className="text-lg
-             text-textColor
+             text-lightColor
+              hover:text-headingColor
+               duration-100
+                transition-all ease-in-out
+                 cursor-pointer">
+              Contact us
+            </li>
+            <li className="text-lg
+             text-lightColor
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
@@ -84,20 +90,20 @@ const Header = () => {
               Menu
             </li>
             <li className="text-lg
-             text-textColor
+             text-lightColor
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              About Us
+              Kitchen
             </li>
             <li className="text-lg
-             text-textColor
+             text-lightColor
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              Service
+              About us
             </li>
           </motion.ul>
 
@@ -105,7 +111,7 @@ const Header = () => {
             className="relative flex items-center justify-center"
             onClick={showCart}
           >
-            <MdShoppingBasket className="text-textColor text-2xl  cursor-pointer" />
+            <MdShoppingBasket className="text-lightColor text-2xl  cursor-pointer" />
             {cartItems && cartItems.length > 0 && (
               <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
                 <p className="text-xs text-white font-semibold">
@@ -133,7 +139,7 @@ const Header = () => {
                 {user && user.email === "mustafaahmed30040@gmail.com" && (
                   <Link to={"/createItem"}>
                     <p
-                      className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                      className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-darkColor text-base"
                       onClick={() => setIsMenu(false)}
                     >
                       New Item <MdAdd />
@@ -142,7 +148,7 @@ const Header = () => {
                 )}
 
                 <p
-                  className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                  className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-darkColor text-base"
                   onClick={logout}
                 >
                   Logout <MdLogout />
@@ -159,7 +165,7 @@ const Header = () => {
           className="relative flex items-center justify-center"
           onClick={showCart}
         >
-          <MdShoppingBasket className="text-textColor text-2xl  cursor-pointer" />
+          <MdShoppingBasket className="text-lightColor text-2xl  cursor-pointer" />
           {cartItems && cartItems.length > 0 && (
             <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
               <p className="text-xs text-white font-semibold">
@@ -170,8 +176,7 @@ const Header = () => {
         </div>
 
         <Link to={"/"} className="flex items-center gap-2">
-          <img src={Logo} className="w-8 object-cover" alt="logo" />
-          <p className="text-headingColor text-xl font-bold"> City</p>
+          <img src={Logo} className="w-24 object-cover" alt="logo" />
         </Link>
 
         <div className="relative">
@@ -189,9 +194,9 @@ const Header = () => {
               exit={{ opacity: 0, scale: 0.6 }}
               className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-12 right-0"
             >
-              {user && user.email === "vetrivel.galaxy@gmail.com" && (
+              {user && user.email === "mustafaahmed30040@gmail.com" && (
                 <Link to={"/createItem"}>
-                  <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base">
+                  <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-darkColor text-base">
                     New Item <MdAdd />
                   </p>
                 </Link>
@@ -199,25 +204,25 @@ const Header = () => {
 
               <ul className="flex flex-col ">
                 <li
-                  className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                  className="text-base text-darkColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
                   Home
                 </li>
                 <li
-                  className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                  className="text-base text-darkColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
                   Menu
                 </li>
                 <li
-                  className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                  className="text-base text-darkColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
-                  About Us
+                  Kitchen
                 </li>
                 <li
-                  className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                  className="text-base text-darkColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
                   onClick={() => setIsMenu(false)}
                 >
                   Service
@@ -225,7 +230,7 @@ const Header = () => {
               </ul>
 
               <p
-                className="m-2 p-2 rounded-md shadow-md flex items-center justify-center bg-gray-200 gap-3 cursor-pointer hover:bg-gray-300 transition-all duration-100 ease-in-out text-textColor text-base"
+                className="m-2 p-2 rounded-md shadow-md flex items-center justify-center bg-gray-200 gap-3 cursor-pointer hover:bg-gray-300 transition-all duration-100 ease-in-out text-darkColor text-base"
                 onClick={logout}
               >
                 Logout <MdLogout />
