@@ -65,46 +65,56 @@ const Header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-x-8  "
           >
-            <li className="text-lg
+            <Link to={"/"}>
+              <li className="text-lg
              text-primary
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              Home
-            </li>
-            <li className="text-lg
+                Home
+              </li>
+            </Link>
+            <Link to={"/contact"}>
+              <li className="text-lg
              text-primary
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              Contact us
-            </li>
-            <li className="text-lg
+                Contact us
+              </li>
+            </Link>
+            <Link to={"/menu"}>
+              <li className="text-lg
              text-primary
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              Menu
-            </li>
-            <li className="text-lg
+                Menu
+              </li>
+            </Link>
+            <Link to={"/kitchen"}>
+              <li className="text-lg
              text-primary
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              Kitchen
-            </li>
-            <li className="text-lg
+                Kitchen
+              </li>
+            </Link>
+            <Link to={"/about"}>
+              <li className="text-lg
              text-primary
               hover:text-headingColor
                duration-100
                 transition-all ease-in-out
                  cursor-pointer">
-              About us
-            </li>
+                About us
+              </li>
+            </Link>
           </motion.ul>
 
           <div
@@ -203,30 +213,46 @@ const Header = () => {
               )}
 
               <ul className="flex flex-col ">
-                <li
-                  className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
-                  onClick={() => setIsMenu(false)}
-                >
-                  Home
-                </li>
-                <li
-                  className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
-                  onClick={() => setIsMenu(false)}
-                >
-                  Menu
-                </li>
-                <li
-                  className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
-                  onClick={() => setIsMenu(false)}
-                >
-                  Kitchen
-                </li>
-                <li
-                  className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
-                  onClick={() => setIsMenu(false)}
-                >
-                  Service
-                </li>
+                <Link to={"/"}>
+                  <li
+                    className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Home
+                  </li>
+                </Link>
+                <Link to={"/menu"}>
+                  <li
+                    className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Menu
+                  </li>
+                </Link>
+                <Link to={"/kitchen"}>
+                  <li
+                    className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Kitchen
+                  </li>
+                </Link>
+                <Link to={"/about"}>
+                  <li
+                    className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    About
+                  </li>
+                </Link>
+                <Link to={"/contact"}>
+                  <li
+                    className="text-base text-main hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2"
+                    onClick={() => setIsMenu(false)}
+                  >
+                    Contact  us
+                  </li>
+                </Link>
               </ul>
 
               <p

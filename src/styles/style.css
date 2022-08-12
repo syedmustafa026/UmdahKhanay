@@ -1,4 +1,7 @@
-    .heading{
-        font-size: 28px;
-    }
-    
+.container {
+    position: relative;
+}
+.main{
+    padding: 40px;
+    margin-left: 40px;
+}
