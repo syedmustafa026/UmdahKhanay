@@ -2,7 +2,7 @@ import React from "react";
 import Delivery from "../img/delivery.png";
 import HeroBg from "../img/heroBg.png";
 import { heroData } from "../utils/data";
-import  "../styles/style.css"
+import "../styles/style.css"
 const HomeContainer = () => {
   return (
     <section
@@ -13,20 +13,19 @@ const HomeContainer = () => {
         <p className="mt-20 text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
           Taste Ghar k khanay Jesa Chahiye
         </p>
-
         <p class=" leading-relaxed">Umdah khana brings Hygenic Quality Home food at your Door step with
           fresh made meal for you.For your better cooked food we takes pre-order maximum which is 24 hours
           before you can give order to us.We are conected with different Social Media platforms Mostly
           present on <u><i><a target="_blank"
             href="https://www.facebook.com/umdahkhanay">Facebook</a></i></u> and <u><i><a
               target="_blank" href="https://www.instagram.com/umdahkhanay">Instagram </a></i></u> .
-          You also submit your pre-order on Whatsapp and do check it out. 
-          </p>
+          You also submit your pre-order on Whatsapp and do check it out.
+        </p>
         <button
           type="button"
           className="button bg-main text-color-primary text-primary w-full md:w-auto px-4 py-2  rounded-lg hover:shadow-lg transition-all ease-in-out duration-100"
         >
-         Get a Quote
+          Get a Quote
         </button>
       </div>
       <div className="py-2 flex-1 flex items-center relative">
@@ -35,7 +34,6 @@ const HomeContainer = () => {
           className=" ml-auto h-700 w-full lg:w-auto lg:h-650"
           alt="hero-bg"
         />
-
         <div className="w-full h-full absolute top-16 left-0 flex items-center justify-center lg:px-32 sm:w-  py-4 gap-4 flex-wrap">
           {heroData &&
             heroData.map((n) => (
