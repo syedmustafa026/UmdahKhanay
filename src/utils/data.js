@@ -42,33 +42,33 @@ export const categories = [
   },
   {
     id: 2,
-    name: "Curry",
-    urlParamName: "curry",
+    name: "Mutton",
+    urlParamName: "Mutton",
   },
   {
     id: 3,
-    name: "Rice",
-    urlParamName: "rice",
+    name: "Beef",
+    urlParamName: "Beef",
   },
   {
     id: 4,
-    name: "Fish",
-    urlParamName: "fish",
+    name: "Rice",
+    urlParamName: "Rice",
   },
   {
     id: 5,
-    name: "Fruits",
-    urlParamName: "fruits",
+    name: "Vegetable",
+    urlParamName: "Vegetable",
   },
   {
     id: 6,
-    name: "Icecreams",
-    urlParamName: "icecreams",
+    name: "Daal",
+    urlParamName: "Daal",
   },
 
   {
     id: 7,
-    name: "Soft Drinks",
+    name: "Roti",
     urlParamName: "drinks",
   },
 ];
